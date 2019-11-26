@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Александр Бурда](https://up.htmlacademy.ru/htmlcss/26/user/1192251).
-* Наставник: `Неизвестно`.
+* Наставник: [Элла Сидорова](https://htmlacademy.ru/profile/elsidora).
 
 ---
 
