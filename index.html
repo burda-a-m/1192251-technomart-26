@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,7 +50,7 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Все для ремонта и стрительства</h1>
+    <h1 class="visually-hidden">Все для ремонта и строительства</h1>
     <section class="container">
       <h2 class="visually-hidden">Категории</h2>
       <ul class="catgory-list">
@@ -87,22 +87,22 @@
           </div>
           <ul class="catgory-slider-list">
             <li class="catgory-slider-item">
-              <header class="slider-header">
+              <div class="slider-header">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
-              </header>
+              </div>
               <img class="slider-image" src="img/slider-bg-1.jpg" width="620" height="266" alt="Перфораторы">
               <!--
                 Сначала думал сделать картинку фоном. Но она является частью контента.
-                Потому вывожу картинку тегом img, а потом спзиционирую и ее и 
+                Потому вывожу картинку тегом img, а потом спозиционирую и ее и 
                 другие элементы относительно слайда
               -->
             </li>
             <li class="catgory-slider-item">
-              <header class="slider-header">
+              <div class="slider-header">
                 <h3>Дрели</h3>
                 <p>соседям на радость</p>
-              </header>
+              </div>
               <img class="slider-image" src="img/slider-bg-2.jpg" width="620" height="266" alt="Дрели">
             </li>
           </ul>
@@ -160,10 +160,10 @@
        </ul>
     </section>
     <section class="container">
-      <div class="blok-title-beige">
+      <header class="blok-title-beige">
         <h2>Популярные производители:</h2>
         <a class="btn" href="">Все производители</a>
-      </div>
+      </header>
       <ul class="banners-list">
         <li class="banner-item">
           <a class="banner" href=""><!--Блоком 220х145-->
@@ -253,7 +253,7 @@
         <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
         Техномарт работает со многими транспортными компаниями:</p>
         <ul class="list-marker">
-          <li>>Деловые линии</li>
+          <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
@@ -264,9 +264,9 @@
         <p>Вы можете забрать товар сами, 
         заехав в наш офис:</p>
         <a class="link-mape" href="https://goo.gl/maps/71g7W4fCdjNoM2Tj8" target="_blank">
-          <img src="https://via.placeholder.com/300x158" alt="Логотип" width="300" height="158">
+          <img src="img/map.png" alt="Наше место положение на карте" width="300" height="158">
         </a>
-        <a href="" class="btn">Заблудились? Напишите нам!</a>
+        <button class="btn">Заблудились? Напишите нам!</button>
       </section>
     </div>
   </main>
