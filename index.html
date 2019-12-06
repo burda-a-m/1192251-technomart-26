@@ -107,8 +107,8 @@
             </li>
           </ul>
           <a class="btn" href="catalog.html">Открыть каталог</a>
-          <button class="arrow-left">Влево</button>
-          <button class="arrow-right">Вправо</button>
+          <button class="arrow-left" type="button">Влево</button>
+          <button class="arrow-right" type="button">Вправо</button>
         </li>
       </ul>
     </section>
@@ -124,8 +124,8 @@
           <del class="product-price-old">32500 Р.</del>
           <ins class="product-price">22500 Р.</ins>
           <div class="product-item-buttons">
-            <button class="btn-buy btn">Купить</button>
-            <button class="btn-bookmark-add btn">В закладки</button>
+            <button type="button" class="btn-buy btn">Купить</button>
+            <button type="button" class="btn-bookmark-add btn">В закладки</button>
           </div>
         </li>
         <li  class="product-item">
@@ -134,8 +134,8 @@
           <del class="product-price-old">22500 Р.</del>
           <ins class="product-price">15500 Р.</ins>
           <div class="product-item-buttons">
-            <button class="btn-buy btn">Купить</button>
-            <button class="btn-bookmark-add btn">В закладки</button>
+            <button type="button" class="btn-buy btn">Купить</button>
+            <button type="button" class="btn-bookmark-add btn">В закладки</button>
           </div>
         </li>
         <li  class="product-item">
@@ -144,8 +144,8 @@
           <del class="product-price-old">30500 Р.</del>
           <ins class="product-price">25500 Р.</ins>
           <div class="product-item-buttons">
-            <button class="btn-buy btn">Купить</button>
-            <button class="btn-bookmark-add btn">В закладки</button>
+            <button type="button" class="btn-buy btn">Купить</button>
+            <button type="button" class="btn-bookmark-add btn">В закладки</button>
           </div>
         </li>
         <li  class="product-item product-item-new">
@@ -153,8 +153,8 @@
           <img class="poduct-image" src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
           <ins class="product-price-old">12500 Р.</ins>
           <div class="product-item-buttons">
-            <button class="btn-buy btn">Купить</button>
-            <button class="btn-bookmark-add btn">В закладки</button>
+            <button type="button" class="btn-buy btn">Купить</button>
+            <button type="button" class="btn-bookmark-add btn">В закладки</button>
           </div>
         </li>
        </ul>
@@ -264,12 +264,46 @@
         <p>Вы можете забрать товар сами, 
         заехав в наш офис:</p>
         <a class="link-mape" href="https://goo.gl/maps/71g7W4fCdjNoM2Tj8" target="_blank">
-          <img src="img/map.png" alt="Наше место положение на карте" width="300" height="158">
+          <img src="img/map.png" width="300" height="158" alt="Наше местоположение на карте: Большая Конюшенная улица, дом 19">
         </a>
-        <button class="btn">Заблудились? Напишите нам!</button>
+        <button class="btn" type="button">Заблудились? Напишите нам!</button>
       </section>
     </div>
   </main>
+
+  <section class="popup-map popup">
+    <h2 class="visually-hidden">Наше местоположение</h2>
+    <div class="popup-image">
+      <img src="img/map-popup.png" width="940" height="447" alt="Наше местоположение на карте: Большая Конюшенная улица, дом 19">
+    </div>
+    <button class="btn-popup-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="popup-feedback popup">
+    <h2 class="visually-hidden">Написать нам</h2>
+    <form action="" class="form-feedback" method="POST">
+      <div class="popup-content">
+        <label class="width-half"> <!--Блок на половину ширины-->
+          Ваше имя: <!-- Возможно, потом заверну в <span> -->
+          <input type="text" placeholder="Имя Фамилия" name="your-name"> 
+          <!-- Полагаю, что элементы ввода на сайте будут иметь один дизайн (форму поиска в шапке в расчет не беру).
+               Поэтому для текстовых "инпутов" и для textarea классы не указываю -->
+        </label>
+        <label class="width-half">
+          Ваш e-mail:
+          <input type="email" placeholder="email@example.com" name="email">
+        </label>
+        <label>
+          Текст письма:
+          <textarea name="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <div class="popup-buttons">
+        <button class="btn" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="btn-popup-close" type="button">Закрыть</button>
+  </section>
 
   <footer class="main-footer">
     <div class="footer-top-bg">

@@ -61,12 +61,53 @@
       </ul>
       <h1>Перфораторы</h1>
       <div class="catalog-middle">
-        <aside class="sidebar">
-          <!-- Форма с фильтром -->
-        </aside>
+        <section class="sidebar">
+          <h2 class="horiz-pannel title-pannel">Фильтр:</h2><!-- У класса .title-pannel будет псевдоэлемент ::after c content: ":" -->
+          <!-- Форма фильтра -->
+          <form action="" method="GET" class="form-filter">
+            <fieldset>
+              <legend class="title-pannel">Цена:</legend>
+              <!-- здесь будет элемент фильтра по цене -->
+            </fieldset>
+            <fieldset>
+              <legend class="title-pannel">Производители:</legend>
+              <ul class="options-list">
+                <li class="option-item">
+                  <input type="checkbox" name="brand-bosch" id="brand-bosch" value="BOSCH" checked><label for="brand-bosch">BOSCH</label>
+                </li>
+                <li class="option-item">
+                  <input type="checkbox" name="brand-interskol" id="brand-interskol" value="ИНТЕРСКОЛ"><label for="brand-interskol">ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="brand-makita" id="brand-makita" value="MAKITA" checked><label for="brand-makita">MAKITA</label>
+                </li>
+                <li class="option-item">
+                  <input type="checkbox" name="brand-dewalt" id="brand-dewalt" value="Dewalt"><label for="brand-dewalt">Dewalt</label>
+                </li>
+                <li class="option-item">
+                  <input type="checkbox" name="brand-hitachi" id="brand-hitachi" value="Hitachi"><label for="brand-hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="title-pannel">Питание:</legend>
+              <ul class="options-list">
+                <li class="option-item">
+                  <input type="radio" name="powertype" id="powertype-battery" value="Аккумуляторные" checked>
+                  <label for="powertype-battery">Аккумуляторные</label>
+                </li>
+                <li class="option-item">
+                  <input type="radio" name="powertype" id="powertype-utility" value="Сетевые">
+                  <label for="powertype-utility">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="btn-option btn">Показать</button>
+          </form>
+        </section>
         <section class="main-content">
           <div class="horiz-pannel">
-            <p class="title-pannel">Сортировка:</p>
+            <p class="title-pannel">Сортировка:</p><!-- У класса .title-pannel будет псевдоэлемент ::after c content: ":" -->
             <ul>
               <li>
                 <a href="" class="sort-price">По цене</a>
@@ -97,8 +138,8 @@
               <del class="product-price-old">22500 Р.</del>
               <ins class="product-price">15500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item">
@@ -107,8 +148,8 @@
               <del class="product-price-old">30500 Р.</del>
               <ins class="product-price">25500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item product-item-new">
@@ -116,8 +157,8 @@
               <img class="poduct-image" src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <ins class="product-price-old">12500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item">
@@ -126,8 +167,8 @@
               <del class="product-price-old">22500 Р.</del>
               <ins class="product-price">15500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item product-item-new">
@@ -136,8 +177,8 @@
               <del class="product-price-old">30500 Р.</del>
               <ins class="product-price">25500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item">
@@ -145,8 +186,8 @@
               <img class="poduct-image" src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <ins class="product-price-old">12500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item product-item-new">
@@ -155,8 +196,8 @@
               <del class="product-price-old">22500 Р.</del>
               <ins class="product-price">15500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item">
@@ -165,8 +206,8 @@
               <del class="product-price-old">30500 Р.</del>
               <ins class="product-price">25500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
             <li  class="product-item">
@@ -174,8 +215,8 @@
               <img class="poduct-image" src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <ins class="product-price-old">12500 Р.</ins>
               <div class="product-item-buttons">
-                <button class="btn-buy btn">Купить</button>
-                <button class="btn-bookmark-add btn">В закладки</button>
+                <button type="button" class="btn-buy btn">Купить</button>
+                <button type="button" class="btn-bookmark-add btn">В закладки</button>
               </div>
             </li>
           </ul>
@@ -198,6 +239,20 @@
       </div>
     </section>
   </main>
+
+  <section class="popup-feedback popup">
+    <h2 class="visually-hidden">Товар в корзине</h2>
+    <div class="popup-content">
+      <p class="popup-msg popup-msg-good">
+        Товар добавлен в корзину!
+      </p>
+    </div>
+    <div class="popup-buttons">
+      <a href="" class="btn">Оформить заказ</a> <!-- Это, похоже, ссылка на страницу оформления заказа -->
+      <button class="btn btn-white" type="button">Продолжить покупки</button>
+    </div>
+    <button class="btn-popup-close" type="button">Закрыть</button>
+  </section>
 
   <footer class="main-footer">
     <div class="footer-top-bg">
