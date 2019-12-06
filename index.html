@@ -271,40 +271,6 @@
     </div>
   </main>
 
-  <section class="popup-map popup">
-    <h2 class="visually-hidden">Наше местоположение</h2>
-    <div class="popup-image">
-      <img src="img/map-popup.png" width="940" height="447" alt="Наше местоположение на карте: Большая Конюшенная улица, дом 19">
-    </div>
-    <button class="btn-popup-close" type="button">Закрыть</button>
-  </section>
-
-  <section class="popup-feedback popup">
-    <h2 class="visually-hidden">Написать нам</h2>
-    <form action="" class="form-feedback" method="POST">
-      <div class="popup-content">
-        <label class="width-half"> <!--Блок на половину ширины-->
-          Ваше имя: <!-- Возможно, потом заверну в <span> -->
-          <input type="text" placeholder="Имя Фамилия" name="your-name"> 
-          <!-- Полагаю, что элементы ввода на сайте будут иметь один дизайн (форму поиска в шапке в расчет не беру).
-               Поэтому для текстовых "инпутов" и для textarea классы не указываю -->
-        </label>
-        <label class="width-half">
-          Ваш e-mail:
-          <input type="email" placeholder="email@example.com" name="email">
-        </label>
-        <label>
-          Текст письма:
-          <textarea name="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        </label>
-      </div>
-      <div class="popup-buttons">
-        <button class="btn" type="submit">Отправить</button>
-      </div>
-    </form>
-    <button class="btn-popup-close" type="button">Закрыть</button>
-  </section>
-
   <footer class="main-footer">
     <div class="footer-top-bg">
       <div class="footer-top container">
@@ -348,6 +314,40 @@
       </div>
     </div>
   </footer>
+
+  <section class="popup-map popup">
+    <h2 class="visually-hidden">Наше местоположение</h2>
+    <div class="popup-image">
+      <img src="img/map-popup.png" width="940" height="447" alt="Наше местоположение на карте: Большая Конюшенная улица, дом 19">
+    </div>
+    <button class="btn-popup-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="popup-feedback popup">
+    <h2 class="visually-hidden">Написать нам</h2>
+    <form action="" class="form-feedback" method="POST">
+      <div class="popup-content">
+        <label class="width-half"> <!--Блок на половину ширины-->
+          Ваше имя: <!-- Возможно, потом заверну в <span> -->
+          <input type="text" placeholder="Имя Фамилия" name="your-name"> 
+          <!-- Полагаю, что элементы ввода на сайте будут иметь один дизайн (форму поиска в шапке в расчет не беру).
+               Поэтому для текстовых "инпутов" и для textarea классы не указываю -->
+        </label>
+        <label class="width-half">
+          Ваш e-mail:
+          <input type="email" placeholder="email@example.com" name="email">
+        </label>
+        <label>
+          Текст письма:
+          <textarea name="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <div class="popup-buttons">
+        <button class="btn" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="btn-popup-close" type="button">Закрыть</button>
+  </section>
 
 </body>
 </html>
