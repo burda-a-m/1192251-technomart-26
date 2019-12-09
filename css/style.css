@@ -6,29 +6,43 @@ html {
 *::after { 
    box-sizing: inherit; 
 }
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
 img {
-   max-width: 100%;
-   height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 li {
-   list-style: none;
+  list-style: none;
 }
+
 a {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 /* --- */
 
 .container {
+	max-width: 960px;
 	padding: 0 10px;
 	margin: 0 auto;
-	max-width: 960px;
 }
 
 /* --- */
 
-.visually-hidden { /* будет скрывать элементы */
-/*
+.visually-hidden { /* скрывает элементы, которые по СЕО должны присутствовать */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -37,6 +51,108 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-*/
+}
+
+/* --- */
+
+.btn { /* Общий класс для кнопок (визуальных) */
+	text-decoration: none;
+}
+
+/* --- */
+
+.main-header {
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+
+	background-color: #f4f7f9;
+}
+
+.header-top-bg {
+	background-color: #293449;
+}
+
+.main-header-top {
+	color: #ffffff;
+}
+
+.logo {
+	background-color: #ee3643;
+}
+
+.bookmark,
+.basket,
+.order {
+	color: #ffffff;
+}
+
+.basket-full {
+	background-color: #ee3643;
+}
+
+.order {
+	background-color: #63a63e;
+}
+
+.header-description {
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+	color: #ee3643;
+}
+
+.header-contacts .phone {
+				/* этот класс может встречаться в других частях сайта
+					 (в частности он присутствует в подвале). При этом
+					 и телефон и адрес имеют специфичное оформление.
+					 Поэтому я здесь использую вложенные селекторы */
+	font-size: 21px;
+	color: #e9292a;
+}
+
+.header-contacts .address {
+	font-size: 14px;
+	font-style: normal;
+	color: #32425c;
+}
+
+.user-block {
+	font-size: 16px;
+}
+
+.user-block a {
+	color: #32425c;
+	text-decoration: underline;
+}
+
+.user-block .btn {
+	text-decoration: none;
+}
+
+.btn-login,
+.btn-logout,
+.btn-reg {
+	font-size: 21px;
+	color: #000000;
+}
+
+.top-menu {
+	background-color: #32425c;
+	box-shadow: inset 0 -5px 0 0 #293449;
+	font-size: 17px;
+}
+
+.top-menu-list {
+	margin: 0;
+	padding: 0;
+}
+
+.top-menu a {
+	color: #ffffff;
+}
+
+/* --- */
+
+.popup {
+	display: none;
 }
 
