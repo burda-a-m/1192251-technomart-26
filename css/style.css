@@ -32,6 +32,19 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2 {
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h1 {
+	color: #32425c;
+	background-color: #f2f6f8;
+}
+
 /* --- */
 
 .container {
@@ -56,7 +69,12 @@ a {
 /* --- */
 
 .btn { /* Общий класс для кнопок (визуальных) */
-	text-decoration: none;
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	
+	color: #ffffff;
+	background-color: #ee3643;
 }
 
 /* --- */
@@ -85,7 +103,7 @@ a {
 	color: #ffffff;
 }
 
-.basket-full {
+.full {
 	background-color: #ee3643;
 }
 
@@ -106,6 +124,7 @@ a {
 					 и телефон и адрес имеют специфичное оформление.
 					 Поэтому я здесь использую вложенные селекторы */
 	font-size: 21px;
+	font-style: normal;
 	color: #e9292a;
 }
 
@@ -115,29 +134,21 @@ a {
 	color: #32425c;
 }
 
-.user-block {
-	font-size: 16px;
-}
-
-.user-block a {
-	color: #32425c;
-	text-decoration: underline;
-}
-
-.user-block .btn {
-	text-decoration: none;
-}
-
-.btn-login,
-.btn-logout,
-.btn-reg {
+.profile-list-buttons a {
 	font-size: 21px;
 	color: #000000;
+}
+
+.profile-list-links a {
+	font-size: 16px;
+	color: #32425c;
+	text-decoration: underline;
 }
 
 .top-menu {
 	background-color: #32425c;
 	box-shadow: inset 0 -5px 0 0 #293449;
+	
 	font-size: 17px;
 }
 
@@ -148,6 +159,242 @@ a {
 
 .top-menu a {
 	color: #ffffff;
+}
+
+/* --- */
+
+.section-gray {
+	background-color: #f4f8f9;
+	background-image: url(../img/bg-gray.png);
+}
+
+/* --- */
+
+.catgory-list {
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+}
+
+.catgory-item {
+	color: #ffffff;
+}
+
+.materials {
+	background-color: #ffbf47;
+}
+
+.instrument {
+	background-color: #3bbce3;
+}
+
+.technic {
+	background-color: #dc91d8;
+}
+
+.discount {
+	background-color: #8ed78f;
+}
+
+.delivery {
+	background-color: #ffc047;
+}
+
+.slider {
+	background-color: #1c1210;
+}
+
+.catgory-item h3 {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: none;
+}
+
+.category-link {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slider-header h3 {
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+.slider-header p {
+	font-size: 18px;
+}
+
+/* --- */
+
+.title-block {
+	background-color: #f9f5f0;
+}
+
+.title-block h2 {
+	color: #32425c;
+}
+
+/* --- */
+
+.product-item {
+	text-align: center;
+}
+
+.product-name {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.product-price-old {
+	font-size: 17px;
+	font-weight: bold;
+	color: #a9a9a9;
+	text-decoration: line-through;
+}
+
+.product-price {
+	font-size: 17px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+
+	background-color: #ee3643;
+}
+
+.btn-buy {
+	font-size: 14px;
+	font-weight: normal;
+	color: #ffffff;
+
+	background-color: #63a63e;
+}
+
+/* --- */
+
+.services label {
+	font-size: 21px;
+	color: #ffffff;
+
+	background-color: #32425c;
+}
+
+.services h3 {
+	font-size: 36px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #32425c
+}
+
+/* --- */
+
+.list-marker {
+	line-height: 40px;
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+	font-size: 18px;
+}
+
+/* --- */
+
+.breadcrumbs {
+	text-transform: uppercase;
+}
+
+.breadcrumbs a {
+	color: #000000;
+}
+
+/* --- */
+
+.horiz-pannel {
+	font-size: 13px;
+	text-transform: uppercase;
+
+	background-color: #f7f3ec;
+}
+
+.title-fieldset {
+	font-size: 17px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.sort-fields-list a {
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: #ee3643 1px dotted;
+}
+
+.sort-fields-list .active {
+	color: #ee3643;
+	border: none;
+}
+
+/* --- */
+
+.options-list {
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.btn-option {
+	font-family: inherit;
+	font-size: 13px;
+	color: #000000;
+
+	background-color: transparent;
+}
+
+/* --- */
+
+.pagination-item a {
+	font-size: 13px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.pagination-item-current a {
+	color: #ffffff;
+
+	background-color: #ee3643;
+}
+
+/* --- */
+
+.main-footer {
+	font-family: "Cuprum", "Arial Narrow", sans-serif;
+	color: #ffffff;
+
+	background-color: #293449;
+}
+
+.footer-top-bg {
+	background-color: #32425c;
+}
+
+.footer-top {
+	font-size: 18px;
+}
+
+.footer-bottom {
+	font-size: 16px;
+}
+
+.main-footer a {
+	color: #ffd180;
+}
+
+.footer-menu-item a {
+	color: #ffffff;
+}
+
+.footer-contacts {
+	font-style: normal;
+}
+
+.social-link  {
+	background-color: #212a3a;
 }
 
 /* --- */
