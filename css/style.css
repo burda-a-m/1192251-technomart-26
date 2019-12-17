@@ -90,6 +90,10 @@ h1 {
 }
 
 .main-header-top {
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 17px;
 	color: #ffffff;
 }
 
@@ -111,14 +115,23 @@ h1 {
 	background-color: #63a63e;
 }
 
+.main-header-middle {
+	display: flex;
+}
+
 .header-description {
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
 	color: #ee3643;
+
+	width: 300px;
+
+	padding: 0 50px;
 }
 
 .header-contacts .phone {
+	display: block;
 				/* этот класс может встречаться в других частях сайта
 					 (в частности он присутствует в подвале). При этом
 					 и телефон и адрес имеют специфичное оформление.
@@ -146,15 +159,17 @@ h1 {
 }
 
 .top-menu {
-	background-color: #32425c;
-	box-shadow: inset 0 -5px 0 0 #293449;
-	
 	font-size: 17px;
 }
 
 .top-menu-list {
+	display: flex;
+	justify-content: space-around;
 	margin: 0;
 	padding: 0;
+
+	background-color: #32425c;
+	box-shadow: inset 0 -5px 0 0 #293449;
 }
 
 .top-menu a {
@@ -237,11 +252,32 @@ h1 {
 
 /* --- */
 
+.products-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	padding: 0;
+	margin: 0;
+}
+
 .product-item {
+	display: flex;
+	flex-direction: column;
+
+	width: 220px;
+
 	text-align: center;
 }
 
+.poduct-image {
+	order: -1;
+}
+
 .product-name {
+	margin: 0;
+	margin-bottom: auto;
+
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 20px;
@@ -310,6 +346,21 @@ h1 {
 
 /* --- */
 
+.columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-about {
+	width: 540px;
+}
+
+.section-contacts {
+	width: 300px;
+}
+
+/* --- */
+
 .list-marker {
 	line-height: 40px;
 	font-family: "Cuprum", "Arial Narrow", sans-serif;
@@ -319,7 +370,15 @@ h1 {
 /* --- */
 
 .breadcrumbs {
+	display: flex;
+
+	padding: 0;
+
 	text-transform: uppercase;
+}
+
+.breadcrumbs li {
+
 }
 
 .breadcrumbs a {
@@ -328,7 +387,29 @@ h1 {
 
 /* --- */
 
+.catalog-middle {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* --- */
+
+.sidebar {
+	width: 220px;
+}
+
+/* --- */
+
+.catalog-content {
+	width: 700px;
+}
+
+/* --- */
+
 .horiz-pannel {
+	display: flex;
+	justify-content: space-between;
+
 	font-size: 13px;
 	text-transform: uppercase;
 
@@ -341,6 +422,10 @@ h1 {
 	text-transform: uppercase;
 }
 
+.sort-fields-list {
+	display: flex;
+}
+
 .sort-fields-list a {
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: #ee3643 1px dotted;
@@ -349,6 +434,10 @@ h1 {
 .sort-fields-list .active {
 	color: #ee3643;
 	border: none;
+}
+
+.sort-order-list {
+	display: flex;
 }
 
 /* --- */
@@ -368,6 +457,10 @@ h1 {
 }
 
 /* --- */
+
+.pagination-list {
+	display: flex;
+}
 
 .pagination-item a {
 	font-size: 13px;
@@ -395,15 +488,36 @@ h1 {
 }
 
 .footer-top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	font-size: 18px;
 }
 
 .footer-bottom {
+	display: flex;
+	justify-content: space-between;
+
 	font-size: 16px;
 }
 
 .main-footer a {
 	color: #ffd180;
+}
+
+.footer-menu-list,
+.footer-addmenu-list {
+	display: flex;
+	justify-content: flex-end;
+
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu-item,
+.footer-addmenu-item {
+	margin-left: 60px;
 }
 
 .footer-menu-item a {
@@ -414,8 +528,60 @@ h1 {
 	font-style: normal;
 }
 
+.footer-contacts .phone {
+	color: #ffffff;
+}
+
+.footer-contacts .address {
+	display: block;
+}
+
+.social-links-list {
+	display: flex;
+	justify-content: space-between;
+
+	width: 132px;
+	padding: 0;	
+}
+
 .social-link  {
+	display: block;
+	
+	width: 41px;
+	height: 41px;
+
+	border-radius: 50%;
+
 	background-color: #212a3a;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.social-link-vk {
+	background-image: url("../img/icon-vk.svg");
+}
+
+.social-link-fb {
+	background-image: url("../img/icon-fb.svg");
+}
+
+.social-link-insta {
+	background-image: url("../img/icon-insta.svg");
+}
+
+.contact-links-list {
+	display: flex;
+
+	width: 300px;
+	padding: 0;
+}
+
+.contact-links-email {
+	width: 160px;
+}
+
+.contact-links-site {
+	width: 111px;
 }
 
 /* --- */
