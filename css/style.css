@@ -677,6 +677,7 @@ h1 {
 
 .contact-links-list {
 	display: flex;
+	justify-content: space-between;
 
 	width: 300px;
 	padding: 0;
