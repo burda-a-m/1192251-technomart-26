@@ -117,6 +117,7 @@ h1 {
 
 .main-header-middle {
 	display: flex;
+	justify-content: space-between;
 }
 
 .header-description {
@@ -145,6 +146,22 @@ h1 {
 	font-size: 14px;
 	font-style: normal;
 	color: #32425c;
+}
+
+.user-block {
+	width: 300px;
+}
+
+.profile-list-buttons {
+	display: flex;
+
+	padding: 0;
+}
+
+.profile-list-links {
+	display: flex;
+
+	padding: 0;
 }
 
 .profile-list-buttons a {
@@ -186,6 +203,9 @@ h1 {
 /* --- */
 
 .catgory-list {
+	margin: 0;
+	padding: 0;
+
 	font-family: "Cuprum", "Arial Narrow", sans-serif;
 }
 
@@ -231,6 +251,8 @@ h1 {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* --- */
+
 .slider-header h3 {
 	font-size: 36px;
 	text-transform: uppercase;
@@ -238,6 +260,16 @@ h1 {
 
 .slider-header p {
 	font-size: 18px;
+}
+
+.catgory-slider-item {
+	display: none;
+}
+
+/* Здесь двойная вложенность для обеспечения работы перключателей слайдера */
+#catgory-check-1:checked ~ .catgory-slider-list .catgory-slider-item:nth-child(1),
+#catgory-check-2:checked ~ .catgory-slider-list .catgory-slider-item:nth-child(2) {
+	display: block;
 }
 
 /* --- */
@@ -309,7 +341,46 @@ h1 {
 
 /* --- */
 
+.banner-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+}
+
+.banner-item {
+}
+
+.banner {
+	display: flex;
+
+	width: 220px;
+	height: 130px;
+
+	border: solid #eaeaea 1px;
+}
+
+.banner img {
+	margin: auto;
+}
+
+/* --- */
+
+.services-nav {
+	width: 240px;
+	margin: 0;
+	padding: 0;
+}
+
+.services-list {
+	width: 620px;
+}
+
 .services label {
+	display: block;
+
 	font-size: 21px;
 	color: #ffffff;
 
@@ -323,9 +394,32 @@ h1 {
 	color: #32425c
 }
 
-.services-list li {
+.services-item {
 	min-height: 400px; /* это временно, чтоб увидеть фон */
+
+	display: none;
+
+	margin: 0;
+	padding: 0;
+	padding-right: 240px;
 }
+
+/* Здесь двойная вложенность для обеспечения работы перключателей 
+   вкладок в блоке "Сервисы" */
+
+#delivery:checked ~ .services-nav label[for="delivery"],
+#guarantee:checked ~ .services-nav label[for="guarantee"],
+#credit:checked ~ .services-nav label[for="credit"] {
+	color: #32425c;
+	background-color: #ffffff;
+}
+
+#delivery:checked ~ .services-list .services-item-delivery,
+#guarantee:checked ~ .services-list .services-item-guarantee,
+#credit:checked ~ .services-list .services-item-credit {
+	display: block;
+}
+
 
 .services-item {
 	background-repeat: no-repeat;
@@ -460,12 +554,21 @@ h1 {
 
 .pagination-list {
 	display: flex;
+
+	padding: 0;
 }
 
-.pagination-item a {
+.pagination-item {
+	margin: 0;
+	margin-right: 10px;
+}
+
+.pagination-item	a {
 	font-size: 13px;
 	color: #000000;
 	text-transform: uppercase;
+
+	border: solid 1px #e5e5e5;
 }
 
 .pagination-item-current a {
@@ -555,6 +658,9 @@ h1 {
 	background-color: #212a3a;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	text-indent: -1000px;
+	overflow: hidden;
 }
 
 .social-link-vk {
