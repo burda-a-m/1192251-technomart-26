@@ -41,8 +41,20 @@ h2 {
 }
 
 h1 {
+	padding: 0 30px;
+
+	line-height: 89px;
+	vertical-align: middle;
+
 	color: #32425c;
 	background-color: #f2f6f8;
+}
+
+/* --- */
+
+:focus {
+	outline: none;
+	box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.4);
 }
 
 /* --- */
@@ -98,7 +110,30 @@ h1 {
 }
 
 .logo {
+	display: flex;
+
+	width: 220px;
+	height: 42px;
+	
 	background-color: #ee3643;
+
+	box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.24),
+							0 5px 0 0 #ee3643;
+}
+
+.logo img {
+	width: 108px;
+	height: 18px;
+	margin: auto;
+}
+
+.logo-footer {
+	height: 63px;
+}
+
+.logo-footer img {
+	width: 136px;
+	height: 22px;
 }
 
 .bookmark,
@@ -420,6 +455,12 @@ h1 {
 	display: block;
 }
 
+#delivery:focus ~ .services-nav label[for="delivery"],
+#guarantee:focus ~ .services-nav label[for="guarantee"],
+#credit:focus ~ .services-nav label[for="credit"] {
+	outline: none;
+	box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.4);
+}
 
 .services-item {
 	background-repeat: no-repeat;
@@ -503,6 +544,11 @@ h1 {
 .horiz-pannel {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+
+	height: 38px;
+	margin: 0;
+	padding: 0 15px 0 20px;
 
 	font-size: 13px;
 	text-transform: uppercase;
@@ -510,10 +556,24 @@ h1 {
 	background-color: #f7f3ec;
 }
 
+
+.title-pannel,
+.sort-fields-list,
+.sort-order-list {
+	margin: 0;
+	padding: 0;
+}
+
 .title-fieldset {
 	font-size: 17px;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+.fieldset-form {
+	padding: 0;
+
+	border: none;
 }
 
 .sort-fields-list {
@@ -537,6 +597,9 @@ h1 {
 /* --- */
 
 .options-list {
+	margin: 0;
+	padding: 0;
+
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
