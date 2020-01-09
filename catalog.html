@@ -405,18 +405,24 @@
   </footer>
 
   <section class="popup-basket popup">
-    <h2 class="visually-hidden">Всплывающее окно Товар в корзине</h2>
-    <div class="popup-content">
-      <p class="popup-msg popup-msg-good">
-        Товар добавлен в корзину!
-      </p>
+    <div class="popup-overlay"></div>
+    <div class="popup-window">
+      <h2 class="visually-hidden">Товар в корзине</h2>
+      <div class="popup-content">
+        <p class="popup-msg popup-msg-good">
+          Товар добавлен в корзину!
+        </p>
+      </div>
+      <div class="popup-buttons">
+        <a href="" class="btn width-half">Оформить заказ</a>
+        <a href="" class="btn btn-white width-half">Продолжить покупки</a>
+      </div>
+      <button class="btn-popup-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </div>
-    <div class="popup-buttons">
-      <a href="" class="btn">Оформить заказ</a> <!-- Это, похоже, ссылка на страницу оформления заказа -->
-      <a href="" class="btn btn-white">Продолжить покупки</a>
-    </div>
-    <button class="btn-popup-close" type="button">Закрыть окно</button>
   </section>
+
+  <script src="js/popup-basket.js"></script>
+  <script src="js/popup-esc.js"></script>
 
 </body>
 </html>
