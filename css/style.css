@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 
-	font-family: "PT Sans", Arial, sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 24px;
@@ -54,7 +54,6 @@ h1 {
 	padding: 0 30px;
 
 	line-height: 89px;
-	vertical-align: middle;
 
 	color: #32425c;
 	background-color: #f2f6f8;
@@ -72,7 +71,7 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 
   border-radius: 3px;
@@ -174,6 +173,8 @@ textarea:focus {
 }
 
 .btn:active {
+  outline: none;
+
 	background-color: #ba2732;
 }
 
@@ -323,7 +324,6 @@ textarea:focus {
 	width: 150px;
 
 	line-height: 42px;
-	vertical-align: middle;
 
 	color: #ffffff;
 }
@@ -371,8 +371,6 @@ textarea:focus {
 .bookmark:focus,
 .basket:focus {
 	background-color: #212a3a;
-
-	box-shadow: none;
 }
 
 .bookmark:hover::before,
@@ -415,8 +413,6 @@ textarea:focus {
 .order:hover,
 .order:focus {
 	background-color: #5fbb2d;
-
-	box-shadow: none;
 }
 
 .order:active {
@@ -430,7 +426,8 @@ textarea:focus {
 	display: flex;
 	justify-content: space-between;
 
-	height: 72px;
+	min-height: 72px;
+
 	margin-top: 47px;
 	margin-bottom: 40px;
 }
@@ -2166,9 +2163,51 @@ textarea:focus {
 
 /* --- */
 
-.popup {
-	display: none;
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
 
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* --- */
+
+.overlay {
+  display: none;
+  
   position: fixed;
   left: 0;
   top: 0;
@@ -2177,19 +2216,193 @@ textarea:focus {
   height: 100%;
 }
 
-.popup-show {
+.show {
   display: block;
 }
 
-.popup-overlay {
+.popup {
+	display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  box-sizing: content-box;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 0 16px 2px rgba(47, 42, 43, 0.5);
+  border-top: solid 7px #ff5257;
+}
+
+.popup * {
+  box-sizing: border-box;
+}
+
+.btn-popup-close {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+
+  width: 21px;
+  height: 21px;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+
+  cursor: pointer;
+}
+
+.popup-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.popup-error {
+  animation: shake 0.6s;
+}
+
+.popup-map {
+  width: 940px;
+  height: 447px;
+
+  margin-left: -470px;
+  margin-top: -223px;
+
+  border: none;
+}
+
+.popup-basket {
+  width: 620px;
+
+  margin-left: -310px;
+  margin-top: -141px;
+}
+
+.popup-image iframe,
+.popup-image img {
   position: absolute;
   left: 0;
   top: 0;
 
-  width: 100%;
+  border: none;
+}
+
+.popup-content {
+  padding-left: 80px;
+  padding-right: 80px;
+
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 18px;
+}
+
+.popup-msg {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  font-size: 30px;
+}
+
+.popup-msg-good {
+  padding-left: 90px;
+
+  background-image: url("../img/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 112px;
+
+  padding-left: 80px;
+  padding-right: 80px;
+
+  background-color: #f4f4f4;
+}
+
+.btn-white {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/**
+  * В файле styleguide.psd визуальное отражение взаимодействия пользователя с этой кнопкой
+  * не показано.  На мой взгляд, ей  не хватало  этого.  Cтилизовал  поведение  сей кнопки
+  * на свое усмотрение.
+  */
+
+.btn-white:hover,
+.btn-white:focus {
+  color: #ee3643;
+  background-color: #ffffff;
+}
+
+.btn-white:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
+.width-half,
+.form-feedback .width-half {
+  width: calc(50% - 10px);
+}
+
+.popup-feedback {
+  width: 620px;
+  height: 430px;
+
+  margin-top: -215px;
+  margin-left: -310px;
+}
+
+.form-feedback .popup-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
+.form-feedback label {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.form-feedback input {
+  width: 100%;
+
+  margin-top: 5px;
+}
+
+.feedback-message {
+  width: 100%;
+  height: 114px;
+}
+
+.form-feedback .btn {
+  width: 100%;
+}
+
+/*
 .popup-window {
   position: absolute;
   top: 50%;
@@ -2208,6 +2421,10 @@ textarea:focus {
 
 .popup-window * {
   box-sizing: border-box;
+}
+
+.popup-error {
+  animation: shake 0.6s;
 }
 
 .popup-map .popup-window {
@@ -2308,6 +2525,8 @@ textarea:focus {
   * не показано.  На мой взгляд, ей  не хватало  этого.  Cтилизовал  поведение  сей кнопки
   * на свое усмотрение.
   */
+
+/*
 .btn-white:hover,
 .btn-white:focus {
   color: #ee3643;
@@ -2334,3 +2553,4 @@ textarea:focus {
 
   cursor: pointer;
 }
+/**/
