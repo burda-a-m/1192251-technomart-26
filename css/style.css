@@ -429,7 +429,7 @@ textarea:focus {
 	min-height: 72px;
 
 	margin-top: 47px;
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 }
 
 .header-description {
@@ -905,6 +905,13 @@ textarea:focus {
 }
 
 /* Здесь двойная вложенность для обеспечения работы перключателей слайдера */
+
+/* #slider-check-3, #slider-check-4, #slider-check-5 добавил на тот случай,
+   если пользователь пожелает увеличить число слайдов (до пяти) */
+#slider-check-3:checked ~ .slider-list .slider-item:nth-child(3),
+#slider-check-4:checked ~ .slider-list .slider-item:nth-child(4),
+#slider-check-5:checked ~ .slider-list .slider-item:nth-child(5),
+
 #slider-check-1:checked ~ .slider-list .slider-item:nth-child(1),
 #slider-check-2:checked ~ .slider-list .slider-item:nth-child(2) {
 	display: block;
@@ -924,6 +931,10 @@ textarea:focus {
 
 	cursor: pointer;
 }
+
+#slider-check-3:checked ~ .slider-controls-circle [for="slider-check-3"]::before,
+#slider-check-4:checked ~ .slider-controls-circle [for="slider-check-4"]::before,
+#slider-check-5:checked ~ .slider-controls-circle [for="slider-check-5"]::before,
 
 #slider-check-1:checked ~ .slider-controls-circle [for="slider-check-1"]::before,
 #slider-check-2:checked ~ .slider-controls-circle [for="slider-check-2"]::before {
@@ -1477,6 +1488,11 @@ textarea:focus {
   width: 200px;
 }
 
+.btn-about,
+.btn-feedback {
+  margin-top: 20px;
+}
+
 .btn-about {
   width: 220px;
 }
@@ -1687,7 +1703,7 @@ textarea:focus {
 
     /*
      * Выделеная часть прогрессбара фильтра цены (margin-left, margin-right)
-     * и координаты его ползунков (left, top)
+     * и координаты его ползунков (left, right)
      */
 .price-progress-selected {
   height: 2px;
@@ -2261,6 +2277,10 @@ textarea:focus {
   animation: bounce 0.6s;
 }
 
+.popup-show {
+  animation: bounce 0.6s;
+}
+
 .popup-error {
   animation: shake 0.6s;
 }
@@ -2401,156 +2421,3 @@ textarea:focus {
 .form-feedback .btn {
   width: 100%;
 }
-
-/*
-.popup-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-
-  width: 620px;
-
-  box-sizing: content-box;
-
-  background-color: #ffffff;
-
-  box-shadow: 0 0 16px 2px rgba(47, 42, 43, 0.5);
-  border-top: solid 7px #ff5257;
-}
-
-.popup-window * {
-  box-sizing: border-box;
-}
-
-.popup-error {
-  animation: shake 0.6s;
-}
-
-.popup-map .popup-window {
-  width: 940px;
-  height: 447px;
-
-  border: none;
-}
-
-.popup-image iframe,
-.popup-image img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.popup-content {
-  padding-left: 80px;
-  padding-right: 80px;
-
-  font-family: "Cuprum", "Arial Narrow", sans-serif;
-  font-size: 18px;
-}
-
-.popup-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  height: 112px;
-
-  padding-left: 80px;
-  padding-right: 80px;
-
-  background-color: #f4f4f4;
-}
-
-.form-feedback .popup-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  padding-top: 45px;
-  padding-bottom: 10px;
-}
-
-.form-feedback label {
-  display: block;
-
-  width: 100%;
-
-  margin-bottom: 20px;
-}
-
-.width-half,
-.form-feedback .width-half {
-  width: calc(50% - 10px);
-}
-
-.form-feedback input {
-  width: 100%;
-
-  margin-top: 5px;
-}
-
-.feedback-message {
-  width: 100%;
-  height: 114px;
-}
-
-.form-feedback .btn {
-  width: 100%;
-}
-
-.popup-msg {
-  padding-bottom: 60px;
-  padding-top: 60px;
-
-  font-size: 30px;
-}
-
-.popup-msg-good {
-  padding-left: 90px;
-
-  background-image: url("../img/icon-mark.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.btn-white {
-  color: #000000;
-
-  background-color: #ffffff;
-}
-
-/**
-  * В файле styleguide.psd визуальное отражение взаимодействия пользователя с этой кнопкой
-  * не показано.  На мой взгляд, ей  не хватало  этого.  Cтилизовал  поведение  сей кнопки
-  * на свое усмотрение.
-  */
-
-/*
-.btn-white:hover,
-.btn-white:focus {
-  color: #ee3643;
-  background-color: #ffffff;
-}
-
-.btn-white:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-}
-
-.btn-popup-close {
-  position: absolute;
-  right: 9px;
-  top: 9px;
-
-  width: 21px;
-  height: 21px;
-
-  border: none;
-
-  background-color: transparent;
-  background-image: url("../img/icon-close.svg");
-
-  cursor: pointer;
-}
-/**/
